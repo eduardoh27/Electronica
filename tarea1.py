@@ -13,7 +13,7 @@ def main():
             return 5.028*np.exp(-(50/9) * 1e6 * t) + 16.971
 
     
-    tiempo = np.linspace(-1e-6, 1e-6, 1000)
+    tiempo = np.linspace(-1e-6, 3e-6, 1000)
     lista_y = [voltaje(i) for i in tiempo]
        
     fig = plt.figure()
