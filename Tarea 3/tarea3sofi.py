@@ -26,12 +26,13 @@ def main():
     ax.set_xlabel('$w$ (rad/s)',fontsize=10)
     ax.set_ylabel('$v_o(w)$ (V)',fontsize=10)
     
-    lista_colores = ['blue', 'green', 'purple', 'pink', 'black'] 
+    lista_colores = ['pink', 'purple', 'black'] 
+    lista_vi = [2, 4, 8]
     
-    for i in range(5):
-        plt.plot(omegas, vo(omegas, i), color=lista_colores[i])
+    for i in range(3):
+        plt.plot(omegas, vo(omegas, lista_vi[i]), color=lista_colores[i])
     
-    plt.savefig('tarea3adu.png', dpi=300, bbox_inches='tight')
+    plt.savefig('tarea3sofi.png', dpi=300, bbox_inches='tight')
     plt.show()
  
 if __name__ == "__main__":

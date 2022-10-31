@@ -12,18 +12,19 @@ def main():
 
     fig = plt.figure()
     ax = fig.add_subplot()
-    ax.set_title('$|v_o(\omega)|$ para varios $v_i$')
+    ax.set_title('$|v_o(\omega)|$ para varios $V_i$')
     ax.set_xlabel('$\omega$ (rad/s)',fontsize=10)
-    ax.set_ylabel('$v_o(\omega)$ (V)',fontsize=10)
+    ax.set_ylabel('$|v_o(\omega)|$ (V)',fontsize=10)
     
-    lista_colores = ['red', 'orange', 'blue', 'green', 'purple', 'brown', 'black', 'pink'] 
+    lista_colores = ['red', 'blue', 'green', 'purple', 'black'] 
+    lista_vi = [0, 2, 4, 8]
     
-    for i in range(8):
-        plt.plot(omegas, vo(omegas, i), color=lista_colores[i], label = f'$v_i = {i}$')
+    for i in range(4):
+        plt.plot(omegas, vo(omegas, lista_vi[i]), color=lista_colores[i], label = f'$V_i = {lista_vi[i]} V$')
         
     ax.legend(loc ="upper left")
     
-    plt.savefig('tarea3adu.png', dpi=300, bbox_inches='tight')
+    plt.savefig('tarea3edu.png', dpi=300, bbox_inches='tight')
     plt.show()
  
 if __name__ == "__main__":
